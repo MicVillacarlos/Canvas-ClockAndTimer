@@ -1,0 +1,200 @@
+const clock = () => {
+    let hours = new Date().getHours()%12||12;
+    let minutes = new Date().getMinutes().toString().padStart(2,"0").split('');
+    let seconds = new Date().getSeconds().toString().padStart(2,"0").split('');
+    hoursFormatted=()=>{
+       return hours.toString().padStart(2,"0").split('')
+    };
+    displayAP=()=>{
+         if (new Date().getHours()>=12){
+          drawHorizontal6(5,5) //a
+          drawVertical6(35,5) //b
+          drawVertical6(5,30) //e
+          drawVertical6(5,5) //f
+          drawHorizontal6(5,30) //g
+         }else{
+          drawHorizontal6(5,5) //a
+          drawVertical6(35,5) //b
+          drawVertical6(35,30) //c
+          drawVertical6(5,30) //e
+          drawVertical6(5,5) //f
+          drawHorizontal6(5,30) //g
+         }
+    },
+    displayHoursTens =()=>{
+     if (hoursFormatted[0]==='0'){
+          drawHorizontal0(5,5),drawVertical0(45,5),drawVertical0(45,50),drawHorizontal0(5,100),drawVertical0(5,50)
+     } 
+     else if (hoursFormatted[0]==='1'){
+          drawVertical0(45,5),drawVertical0(45,50)} 
+    else {}};
+    displayHoursOnes=()=>{
+        if (hoursFormatted[1]==='0'){
+          drawHorizontal1(5,5),drawVertical1(45,5),drawVertical1(45,50),drawHorizontal1(5,100),drawVertical1(5,50),drawVertical1(5,5)
+        } 
+        else if (hoursFormatted[1]==='1'){
+          drawVertical1(45,5),drawVertical1(45,50)
+        } 
+        else if (hoursFormatted[1]==='2'){
+          drawHorizontal1(5,5),drawVertical1(45,5),drawHorizontal1(5,100),drawVertical1(5,50),drawHorizontal1(5,50)
+        }
+        else if (hoursFormatted[1]==='3'){
+          drawHorizontal1(5,5),drawVertical1(45,5),drawVertical1(45,50),drawHorizontal1(5,100),drawHorizontal1(5,50)
+        }
+        else if (hoursFormatted[1]==='4'){
+          drawVertical1(45,5),drawVertical1(45,50),drawVertical1(5,5),drawHorizontal1(5,50)
+        }
+        else if (hoursFormatted[1]==='5'){
+          drawHorizontal1(5,5),drawVertical1(45,50),drawHorizontal1(5,100),drawVertical1(5,5),drawHorizontal1(5,50)
+        }
+        else if (hoursFormatted[1]==='6'){
+          drawHorizontal1(5,5),drawVertical1(45,50),drawHorizontal1(5,100),drawVertical1(5,50),drawVertical1(5,5),drawHorizontal1(5,50)
+        }
+        else if (hoursFormatted[1]==='7'){
+          drawHorizontal1(5,5),drawVertical1(45,5),drawVertical1(45,50)
+        }
+        else if (hoursFormatted[1]==='8'){
+          drawHorizontal1(5,5) //a
+          drawVertical1(45,5) //b
+          drawVertical1(45,50) //c
+          drawHorizontal1(5,100) //d
+          drawVertical1(5,50) //e
+          drawVertical1(5,5) //f
+          drawHorizontal1(5,50) //g
+        }
+        else if (hoursFormatted[1]==='9'){
+          drawHorizontal1(5,5),drawVertical1(45,5),drawVertical1(45,50),drawHorizontal1(5,100),drawVertical1(5,5),drawHorizontal1(5,50)
+        }
+    else {}};
+    displayMinutesTens =()=>{
+     if (minutes[0]==='0'){
+          drawHorizontal2(5,5),drawVertical2(45,5),drawVertical2(45,50),drawHorizontal2(5,100),drawVertical2(5,50),drawVertical2(5,5)
+          } 
+          else if (minutes[0]==='1'){
+          drawVertical2(45,5),drawVertical2(45,50)
+          } 
+          else if (minutes[0]==='2'){
+          drawHorizontal2(5,5),drawVertical2(45,5),drawHorizontal2(5,100),drawVertical2(5,50),drawHorizontal2(5,50)
+          }
+          else if (minutes[0]==='3'){
+          drawHorizontal2(5,5),drawVertical2(45,5),drawVertical2(45,50),drawHorizontal2(5,100),drawHorizontal2(5,50)
+          }
+          else if (minutes[0]==='4'){
+          drawVertical2(45,5),drawVertical2(45,50),drawVertical2(5,5),drawHorizontal2(5,50)
+          }
+          else if (minutes[0]==='5'){
+          drawHorizontal2(5,5),drawVertical2(45,50),drawHorizontal2(5,100),drawVertical2(5,5),drawHorizontal2(5,50)
+          }
+    else {}};
+    displayMinutesOnes =()=>{
+     if (minutes[1]==='0'){
+          drawHorizontal3(5,5),drawVertical3(45,5),drawVertical3(45,50),drawHorizontal3(5,100),drawVertical3(5,50),drawVertical3(5,5)
+        } 
+        else if (minutes[1]==='1'){
+          drawVertical3(45,5),drawVertical3(45,50)
+        } 
+        else if (minutes[1]==='2'){
+          drawHorizontal3(5,5),drawVertical3(45,5),drawHorizontal3(5,100),drawVertical3(5,50),drawHorizontal3(5,50)
+        }
+        else if (minutes[1]==='3'){
+          drawHorizontal3(5,5),drawVertical3(45,5),drawVertical3(45,50),drawHorizontal3(5,100),drawHorizontal3(5,50)
+        }
+        else if (minutes[1]==='4'){
+          drawVertical3(45,5),drawVertical3(45,50),drawVertical3(5,5),drawHorizontal3(5,50)
+        }
+        else if (minutes[1]==='5'){
+          drawHorizontal3(5,5),drawVertical3(45,50),drawHorizontal3(5,100),drawVertical3(5,5),drawHorizontal3(5,50)
+        }
+        else if (minutes[1]==='6'){
+          drawHorizontal3(5,5),drawVertical3(45,50),drawHorizontal3(5,100),drawVertical3(5,50),drawVertical3(5,5),drawHorizontal3(5,50)
+        }
+        else if (minutes[1]==='7'){
+          drawHorizontal3(5,5),drawVertical3(45,5),drawVertical3(45,50)
+        }
+        else if (minutes[1]==='8'){
+          drawHorizontal3(5,5) //a
+          drawVertical3(45,5) //b
+          drawVertical3(45,50) //c
+          drawHorizontal3(5,100) //d
+          drawVertical3(5,50) //e
+          drawVertical3(5,5) //f
+          drawHorizontal3(5,50) //g
+        }
+        else if (minutes[1]==='9'){
+          drawHorizontal3(5,5),drawVertical3(45,5),drawVertical3(45,50),drawHorizontal3(5,100),drawVertical3(5,5),drawHorizontal3(5,50)}
+    else {}};
+    displaySecondsTens =()=>{
+     if (seconds[0]==='0'){
+          drawHorizontal4(5,5),drawVertical4(45,5),drawVertical4(45,50),drawHorizontal4(5,100),drawVertical4(5,50),drawVertical4(5,5)
+        } 
+        else if (seconds[0]==='1'){
+          drawVertical4(45,5),drawVertical4(45,50)
+        } 
+        else if (seconds[0]==='2'){
+          drawHorizontal4(5,5),drawVertical4(45,5),drawHorizontal4(5,100),drawVertical4(5,50),drawHorizontal4(5,50)
+        }
+        else if (seconds[0]==='3'){
+          drawHorizontal4(5,5),drawVertical4(45,5),drawVertical4(45,50),drawHorizontal4(5,100),drawHorizontal4(5,50)
+        }
+        else if (seconds[0]==='4'){
+          drawVertical4(45,5),drawVertical4(45,50),drawVertical4(5,5),drawHorizontal4(5,50)
+        }
+        else if (seconds[0]==='5'){
+          drawHorizontal4(5,5),drawVertical4(45,50),drawHorizontal4(5,100),drawVertical4(5,5),drawHorizontal4(5,50)
+        }
+        else if (seconds[0]==='6'){
+          drawHorizontal4(5,5),drawVertical4(45,50),drawHorizontal4(5,100),drawVertical4(5,50),drawVertical4(5,5),drawHorizontal4(5,50)
+        }
+        else if (seconds[0]==='7'){
+          drawHorizontal4(5,5),drawVertical4(45,5),drawVertical4(45,50)
+        }
+        else if (seconds[0]==='8'){
+          drawHorizontal4(5,5) //a
+          drawVertical4(45,5) //b
+          drawVertical4(45,50) //c
+          drawHorizontal4(5,100) //d
+          drawVertical4(5,50) //e
+          drawVertical4(5,5) //f
+          drawHorizontal4(5,50) //g
+        }
+        else if (seconds[0]==='9'){
+          drawHorizontal4(5,5),drawVertical4(45,5),drawVertical4(45,50),drawHorizontal4(5,100),drawVertical4(5,5),drawHorizontal4(5,50)}
+    else {}};
+    displaySecondsOnes =()=>{
+     if (seconds[1]==='0'){
+          drawHorizontal5(5,5),drawVertical5(45,5),drawVertical5(45,50),drawHorizontal5(5,100),drawVertical5(5,50),drawVertical5(5,5)
+        } 
+        else if (seconds[1]==='1'){
+          drawVertical5(45,5),drawVertical5(45,50)
+        } 
+        else if (seconds[1]==='2'){
+          drawHorizontal5(5,5),drawVertical5(45,5),drawHorizontal5(5,100),drawVertical5(5,50),drawHorizontal5(5,50)
+        }
+        else if (seconds[1]==='3'){
+          drawHorizontal5(5,5),drawVertical5(45,5),drawVertical5(45,50),drawHorizontal5(5,100),drawHorizontal5(5,50)
+        }
+        else if (seconds[1]==='4'){
+          drawVertical5(45,5),drawVertical5(45,50),drawVertical5(5,5),drawHorizontal5(5,50)
+        }
+        else if (seconds[1]==='5'){
+          drawHorizontal5(5,5),drawVertical5(45,50),drawHorizontal5(5,100),drawVertical5(5,5),drawHorizontal5(5,50)
+        }
+        else if (seconds[1]==='6'){
+          drawHorizontal5(5,5),drawVertical5(45,50),drawHorizontal5(5,100),drawVertical5(5,50),drawVertical5(5,5),drawHorizontal5(5,50)
+        }
+        else if (seconds[1]==='7'){
+          drawHorizontal5(5,5),drawVertical5(45,5),drawVertical5(45,50)
+        }
+        else if (seconds[1]==='8'){
+          drawHorizontal5(5,5) //a
+          drawVertical5(45,5) //b
+          drawVertical5(45,50) //c
+          drawHorizontal5(5,100) //d
+          drawVertical5(5,50) //e
+          drawVertical5(5,5) //f
+          drawHorizontal5(5,50) //g
+        }
+        else if (seconds[1]==='9'){
+          drawHorizontal5(5,5),drawVertical5(45,5),drawVertical5(45,50),drawHorizontal5(5,100),drawVertical5(5,5),drawHorizontal5(5,50)}
+    else {}};
+        }

@@ -1,12 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Readex+Pro:wght@300&display=swap');
+*{
+    font-family:"Readex Pro",sans-serif ;
+}
 body{
     margin:0;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    padding-top: 20vh;
+    padding-top: 30vh;
 }
-
 img{
     width: 400px;
     margin: 10px;
@@ -14,19 +16,20 @@ img{
 .outerBox{
     text-align: center;
     background-color: black;
-    padding: 20px;
+    padding: 30px;
     border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(38, 48, 14, 0.2);
 }
 #classContainer{
     padding: 2em;
-    background-color: rgb(235, 228, 142);
+    background-color: rgb(199, 193, 128);
     border-radius: 15px;
-    border:5px rgb(211, 209, 187) solid;
+    border:2px rgb(300, 209, 187) solid;
 }
 #ampm{
     text-align: end;
 }
-canvas{
+.canvasClock{
     background-color:rgb(218, 212, 139);
 }
 #canvas5 {
@@ -34,4 +37,60 @@ canvas{
 }
 #canvas6{
     height: 95px;
+}
+/*-----*/
+.timerSection{
+    display: flex;
+}
+#timerContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 4em;
+    padding: 50px 50px 20px 50px;
+    background-color: rgb(236, 221, 9);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(38, 48, 14, 0.2);
+}
+.innerContainer{
+    background-color: rgb(236, 221, 9);
+}
+.canvasTimer{
+    background-color: rgb(236, 221, 9);
+    padding:5px;
+}
+.seiko{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin-top: 10px;
+}
+.inputContainer{
+    align-items: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    width: 50px;
+}
+.timerButtonContainer{
+    color: white;
+    margin-bottom: 1em;
+    text-align: center;
+    background-color: black;
+    width: 150px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 1290px) {
+    body{
+        align-items: center;
+        flex-direction: column;
+    }
+    .timerSection{
+        margin-top:150px;
+    }
 }
